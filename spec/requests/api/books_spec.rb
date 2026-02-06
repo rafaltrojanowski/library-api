@@ -40,7 +40,7 @@ RSpec.describe "Books API", type: :request do
       json = JSON.parse(response.body)
 
       expect(response).to have_http_status(:ok)
-      expect(json.first).to include(
+      expect(json.last).to include(
         "serial_number" => "111111",
         "status" => "available"
       )
